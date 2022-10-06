@@ -22,7 +22,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginWill />} />
+        <Route path="/login-will" element={<LoginWill />} />
         <Route path="/main-will" element={<MainWill />} />
         <Route path="/login-nuri" element={<LoginNuri />} />
         <Route path="/main-nuri" element={<MainNuri />} />
