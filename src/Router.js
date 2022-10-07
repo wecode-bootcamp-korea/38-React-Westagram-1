@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+// Nav
+import Nav from './components/Nav/Nav';
+
 // Will의 컴포넌트
 import LoginWill from './pages/Will/Login/Login';
 import MainWill from './pages/Will/Main/Main';
@@ -22,6 +25,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Nav />} />
         <Route path="/login-will" element={<LoginWill />} />
         <Route path="/main-will" element={<MainWill />} />
         <Route path="/login-nuri" element={<LoginNuri />} />
