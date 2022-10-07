@@ -15,27 +15,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
+import { Nav } from './components/Nav/Nav';
 
 function MainWill() {
   let [likes, likesadd] = useState(0);
 
   return (
     <>
-      <nav className="topSideNavigation">
-        <div>
-          <FontAwesomeIcon icon={faInstagram} id="instaIcon" />
-          <span className="topSideInstaText">Instagram</span>
-        </div>
-        <div className="searchBar">
-          <FontAwesomeIcon icon={faMagnifyingGlassLocation} id="magnifier" />
-          <input className="topSideSearch" type="text" placeholder="검색" />
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faCompass} id="compass" />
-          <FontAwesomeIcon icon={faHeart} id="upperHeart" />
-          <FontAwesomeIcon icon={faUser} id="user" />
-        </div>
-      </nav>
+      <Nav />
       <main>
         <div className="feeds">
           <article>

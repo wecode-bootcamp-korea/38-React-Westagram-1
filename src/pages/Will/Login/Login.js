@@ -10,46 +10,61 @@ function LoginWill() {
     navigate('/Main');
   };
 
+  let [checkid, setCheckid] = useState('');
+  let [checkpw, setCheckpw] = useState('');
+
+  const saveUserID = event => {
+    setCheckid(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const saveUserPw = event => {
+    setCheckpw(event.target.value);
+    console.log(event.target.value);
+  };
+
   return (
-    <>
-      <div className="outerbox">
-        <div className="boxWrap">
-          <p className="westagramTitle">Westagram</p>
-          <form className="inputBox">
-            <ul className="loginInfo">
-              <li>
-                <input
-                  className="loginInput"
-                  id="idCheck"
-                  type="text"
-                  placeholder="Phone number, username, or email"
-                />
-              </li>
-              <li>
-                <input
-                  className="loginInput"
-                  id="pwCheck"
-                  type="password"
-                  placeholder="Password"
-                />
-              </li>
-              <li>
-                <button
-                  className="loginButton"
-                  id="logButton"
-                  type="button"
-                  onClick={onClickBtn}
-                  disabled
-                >
-                  Log in
-                </button>
-              </li>
-            </ul>
-            <p className="passwordForgot">Forgot Password?</p>
-          </form>
-        </div>
+    <div className="outerbox">
+      <div className="boxWrap">
+        <p className="westagramTitle">Westagram</p>
+        <form className="inputBox">
+          <ul className="loginInfo">
+            <li>
+              <input
+                className="loginInput"
+                id="idCheck"
+                type="text"
+                placeholder="Phone number, username, or email"
+                onChange={saveUserID}
+              />
+            </li>
+            <li>
+              <input
+                className="loginInput"
+                id="pwCheck"
+                type="password"
+                placeholder="Password"
+                onChange={saveUserPw}
+              />
+            </li>
+            <li>
+              <button
+                className="loginButton"
+                id="logButton"
+                type="button"
+                disabled={
+                  checkid.includes('@') && checkpw.length > 4 ? false : true
+                }
+                onClick={onClickBtn}
+              >
+                Log in
+              </button>
+            </li>
+          </ul>
+          <p className="passwordForgot">Forgot Password?</p>
+        </form>
       </div>
-    </>
+    </div>
   );
 }
 
