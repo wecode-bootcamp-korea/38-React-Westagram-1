@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster:regular");
+@import url('https://fonts.googleapis.com/css?family=Lobster:regular');
 a {
   text-decoration: none;
   color: black;
@@ -14,7 +14,6 @@ nav {
   border-bottom: 1px solid lightgrey;
   background-color: rgb(250, 256, 250);
 }
-
 
 .icon {
   display: flex;
@@ -50,7 +49,6 @@ nav {
     font-family: Lobster;
   }
 }
-
 
 .searchBox {
   margin-left: 100px;
@@ -93,7 +91,7 @@ nav {
 }
 .navMe {
   position: relative;
-  background-image: url("../../assets/cat.jpeg");
+  background-image: url('../../../assets/Jung/cat.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -210,7 +208,7 @@ main {
 }
 .mainFace {
   position: relative;
-  background-image: url("../../assets/cat.jpeg");
+  background-image: url('../../../assets/Jung/cat.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -313,7 +311,7 @@ main {
 .bottomBoxMidIcon {
   position: relative;
   display: flex;
-  background-image: url("../../assets/dog1.jpeg");
+  background-image: url('../../../assets/Jung/dog1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -396,16 +394,15 @@ main {
   position: flex;
   justify-content: space-between;
   align-items: center;
- 
 
   .buttonClick {
-  top: 3px;
-  left: 510px;
-  color: blue;
-  position: relative;
-  cursor: pointer;
-  width: auto;
-}
+    top: 3px;
+    left: 510px;
+    color: blue;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+  }
 }
 .mainFooterInput {
   position: relative;
@@ -431,7 +428,7 @@ main {
 }
 .mainRightIcon {
   position: relative;
-  background-image: url("../../assets/logo.jpeg");
+  background-image: url('../../../assets/Jung/logo.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -484,7 +481,7 @@ main {
 }
 .storyBoxIdBoxIconOne {
   position: relative;
-  background-image: url("../../assets/dog3.jpeg");
+  background-image: url('../../../assets/Jung/dog3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -495,7 +492,7 @@ main {
 }
 .storyBoxIdBoxIconTwo {
   position: relative;
-  background-image: url("../../assets/dog4.jpeg");
+  background-image: url('../../../assets/Jung/dog4.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -506,7 +503,7 @@ main {
 }
 .storyBoxIdBoxIconThree {
   position: relative;
-  background-image: url("../../assets/dog5.jpeg");
+  background-image: url('../../../assets/Jung/dog5.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -578,7 +575,7 @@ main {
 .recommendUpIdBoxIconOne {
   position: relative;
   display: inline-block;
-  background-image: url("../../assets/dog6.jpeg");
+  background-image: url('../../../assets/Jung/dog6.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -591,7 +588,7 @@ main {
 .recommendUpIdBoxIconTwo {
   position: relative;
   display: inline-block;
-  background-image: url("../../assets/dog1.jpeg");
+  background-image: url('../../../assets/Jung/dog1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -603,7 +600,7 @@ main {
 .recommendUpIdBoxIconThree {
   position: relative;
   display: inline-block;
-  background-image: url("../../assets/dog2.jpeg");
+  background-image: url('../../../assets/Jung/dog2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;

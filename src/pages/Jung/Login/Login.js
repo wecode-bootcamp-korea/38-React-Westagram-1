@@ -1,28 +1,28 @@
-import React,{useState} from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Login.scss";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 function Login() {
   const navigate = useNavigate();
-  const [disa,setDisa] = useState(true);
-  const gotoMain=()=>{
+  const [disa, setDisa] = useState(true);
+  const gotoMain = () => {
     navigate('/Main');
-  }
-  const Main=()=>{
-    (id.includes("@") && pw.length>4) ? gotoMain() : alert("No");
-  } 
-  const ok=()=> {
-    (id.length>0 || pw.length>0) ? setDisa(false) : setDisa(true);
-  }
-  const [id,setId] = useState("");
-  const [pw,setPw] = useState("");
+  };
+  const Main = () => {
+    id.includes('@') && pw.length > 4 ? gotoMain() : alert('No');
+  };
+  const ok = () => {
+    id.length > 0 || pw.length > 0 ? setDisa(false) : setDisa(true);
+  };
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
 
-  const pullId=(e) =>{
-    setId(e.target.value)
-  }  
-  const pullPw=(e) =>{
-    setPw(e.target.value)
-  }
+  const pullId = e => {
+    setId(e.target.value);
+  };
+  const pullPw = e => {
+    setPw(e.target.value);
+  };
   return (
     <>
       <div className="login">
@@ -43,9 +43,16 @@ function Login() {
             placeholder="  비밀번호"
             onChange={pullPw}
             onKeyUp={ok}
-          /><button type="button" className="buttonClick" onClick={Main} disabled={disa}>로그인</button>
-            {/* 로그인</Link> */}
-       
+          />
+          <button
+            type="button"
+            className="buttonClick"
+            onClick={Main}
+            disabled={disa}
+          >
+            로그인
+          </button>
+          {/* 로그인</Link> */}
         </div>
         <div className="footer">
           <a href="#">비밀번호를 잊으셨나요?</a>

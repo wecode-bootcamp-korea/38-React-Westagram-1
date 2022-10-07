@@ -1,31 +1,32 @@
-import React, { useState } from "react";
-import "./Main.scss";
-import Comment from "./comment";
-function Main() {
-  const [idnum,setIdnum] = useState([]);
-  const [num,setNum] =useState(0)
-  const [ttext, setTtext] = useState([]);
-  const [cm, setCm] = useState("");
-  const delid = (event) =>{
-    let newArr=[]
-    newArr = idnum.filter((item)=>(event.target.id === item.id));
-    setTtext(newArr)
-  }
+import React, { useState } from 'react';
+import './Main.scss';
+import Commenttext from './commenttext';
+function MainJung() {
+  const [textlist, setTextlist] = useState([]);
+  const [comment, setComment] = useState('');
+
+  let arr = [...textlist];
   const commnetClick = () => {
-    if (cm === "") {
+    if (comment === '') {
       return;
     }
-    setNum(num+1)
-    setTtext([...ttext, cm]);
-    setIdnum([...idnum, {
-      id : num,
-      comment : cm,
-    }]);
-    setCm("");
-  };
 
-  const textComment = (e) => {
-    setCm(e.target.value);
+    arr = [
+      ...arr,
+      {
+        id: Date.now(),
+        comment: comment,
+      },
+    ];
+    setTextlist(arr);
+    setComment('');
+  };
+  const delClick = event => {
+    arr = arr.filter(item => item.id != event.target.id);
+    setTextlist(arr);
+  };
+  const textComment = e => {
+    setComment(e.target.value);
   };
   return (
     <React.Fragment>
@@ -126,16 +127,19 @@ function Main() {
                   <div className="bottomBoxMid">
                     <div className="bottomBoxMidIcon"></div>
                     <div className="bottomBoxMidId">
-                      Dog3님 외
-                      <div className="number">3</div>
+                      Dog3님 외<div className="number">3</div>
                       명이 좋아합니다.
                     </div>
                   </div>
                   <div className="bottomBoxDown">
                     <div className="bottomBoxDownComment">
                       <div>
-                        {ttext.map((cm,idnum) => (
-                          <Comment idnum={idnum} Cm={cm} delid={delid}/>
+                        {arr.map(textlist => (
+                          <Commenttext
+                            id={textlist.id}
+                            comment={textlist.comment}
+                            delClick={delClick}
+                          />
                         ))}
                       </div>
                     </div>
@@ -229,4 +233,4 @@ function Main() {
     </React.Fragment>
   );
 }
-export default Main;
+export default MainJung;
