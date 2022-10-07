@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Main.scss';
-import Commenttext from './commenttext';
+import Commenttext from './Commenttext';
 function MainJung() {
   const [textlist, setTextlist] = useState([]);
   const [comment, setComment] = useState('');
 
   let arr = [...textlist];
-  const commnetClick = () => {
+  const commnetClick = e => {
+    e.preventDefault();
     if (comment === '') {
       return;
     }
@@ -36,11 +37,7 @@ function MainJung() {
             <div className="left">
               <div className="icon">
                 <a href="/main.html">
-                  <img
-                    alt="instagram"
-                    src="/images/instagram.png"
-                    className="instagram"
-                  />
+                  <div alt="instagram" className="instagram" />
                 </a>
               </div>
               <div className="logo">
@@ -52,17 +49,9 @@ function MainJung() {
               <i className="fa-solid fa-magnifying-glass"></i>
             </div>
             <div className="right">
-              <img
-                alt="explore"
-                src="/images/explore.png"
-                className="rightExplore"
-              />
-              <img alt="heart" src="/images/heart.png" className="rightHeart" />
-              <img
-                alt="profile"
-                src="/images/profile.png"
-                className="rightProfile"
-              />
+              <div alt="explore" className="rightExplore" />
+              <div alt="heart" className="rightHeart" />
+              <div alt="profile" className="rightProfile" />
               <div className="navMe">
                 <div className="navMeBox">
                   <div className="navMeBoxPro">
@@ -103,7 +92,7 @@ function MainJung() {
                   </div>
                 </div>
                 <div className="article">
-                  <img alt="photo" src="/images/photo.jpg" className="photo" />
+                  <div alt="photo" className="photo" />
                 </div>
                 <div className="bottomBox">
                   <div className="bottomBoxUp">
@@ -146,7 +135,7 @@ function MainJung() {
                     <div className="bottomBoxDownHeart"></div>
                   </div>
                 </div>
-                <div className="mainFooter">
+                <form className="mainFooter" onSubmit={commnetClick}>
                   <input
                     type="text"
                     className="mainFooterInput"
@@ -156,7 +145,7 @@ function MainJung() {
                   <div className="buttonClick" onClick={commnetClick}>
                     게시
                   </div>
-                </div>
+                </form>
               </div>
               <div className="mainRight">
                 <div className="mainRightIconBox">

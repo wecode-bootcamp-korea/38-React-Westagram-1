@@ -6,7 +6,7 @@ const Commenttext = props => {
       <div className="commentId">Dog</div>
       <div className="commentComment">{props.comment}</div>
       <div className="commentHeartBox">
-        <img alt="heart" className="commentHeart" src="/images/heart.png" />
+        <div alt="heart" className="commentHeart" />
       </div>
       <div className="deleteKey" id={props.id} onClick={props.delClick}>
         삭제
