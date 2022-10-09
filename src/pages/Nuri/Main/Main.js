@@ -1,12 +1,28 @@
 import './Main.scss';
+import { nanoid } from 'nanoid';
 import { useState } from 'react';
+import Comment from './components/Comment';
 
 function Main() {
+  let userName = 'onnuri';
   let [comment, setComment] = useState('');
+  let [commentBox, setCommentBox] = useState([]);
   const onChangeComment = event => setComment(event.target.value);
   const onSubmitComment = event => {
     event.preventDefault();
+    const copyCommentBox = [...commentBox];
+    copyCommentBox.push(comment);
+
+    setCommentBox(copyCommentBox);
+    setComment('');
   };
+  const validation = () => {
+    if (comment.length !== 0) {
+      return true;
+    }
+    return false;
+  };
+  const Validation = validation();
   return (
     <div className="Main">
       <header>
@@ -153,11 +169,16 @@ function Main() {
                 <p className="user_say">
                   <strong>onnuri</strong> 🍎
                 </p>
-                {/**<!-- 댓글 추가 되는 영역 -->**/}
                 <div className="comment_list_wrap">
-                  {/* <li className="add">
-                <span className="comment_id">ID</span><span className="comment_con">내용</span><span className="comment_heart"><i className="fa-regular fa-heart"></i></span><a href="#!">삭제</a>
-            </li> */}
+                  {commentBox.map((commentArr, i) => {
+                    return (
+                      <Comment
+                        userName={userName}
+                        userComment={commentArr}
+                        key={nanoid()}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -168,7 +189,11 @@ function Main() {
                 placeholder="댓글달기..."
                 type="text"
               />
-              <button disabled type="submit" className="comment_btn">
+              <button
+                disabled={!Validation}
+                type="submit"
+                className="comment_btn"
+              >
                 게시
               </button>
             </form>

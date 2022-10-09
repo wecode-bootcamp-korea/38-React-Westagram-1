@@ -362,6 +362,7 @@
           }
           /* 추가되는 댓글 */
           .comment_list_wrap {
+            list-style: none;
             .add {
               position: relative;
               .comment_id {
