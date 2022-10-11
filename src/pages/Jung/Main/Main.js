@@ -1,34 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Main.scss';
-import Commenttext from './Commenttext';
+// import Commenttext from './Commenttext';
+import Aside from './Aside';
+import { AsideData } from './AsideData';
+import CommentList from './CommentList';
 function MainJung() {
-  const [textlist, setTextlist] = useState([]);
-  const [comment, setComment] = useState('');
-
-  let arr = [...textlist];
-  const commnetClick = e => {
-    e.preventDefault();
-    if (comment === '') {
-      return;
-    }
-
-    arr = [
-      ...arr,
-      {
-        id: Date.now(),
-        comment: comment,
-      },
-    ];
-    setTextlist(arr);
-    setComment('');
-  };
-  const delClick = event => {
-    arr = arr.filter(item => item.id != event.target.id);
-    setTextlist(arr);
-  };
-  const textComment = e => {
-    setComment(e.target.value);
-  };
+  const [commentLists, setCommentLists] = useState([]);
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(response => response.json())
+      .then(response => {
+        setCommentLists(response);
+      });
+  }, []);
   return (
     <React.Fragment>
       <body>
@@ -37,7 +21,11 @@ function MainJung() {
             <div className="left">
               <div className="icon">
                 <a href="/main.html">
-                  <div alt="instagram" className="instagram" />
+                  <div
+                    alt="instagram"
+                    src="/images/instagram.png"
+                    className="instagram"
+                  />
                 </a>
               </div>
               <div className="logo">
@@ -51,7 +39,11 @@ function MainJung() {
             <div className="right">
               <div alt="explore" className="rightExplore" />
               <div alt="heart" className="rightHeart" />
-              <div alt="profile" className="rightProfile" />
+              <div
+                alt="profile"
+                src="/images/profile.png"
+                className="rightProfile"
+              />
               <div className="navMe">
                 <div className="navMeBox">
                   <div className="navMeBoxPro">
@@ -83,7 +75,18 @@ function MainJung() {
         <main>
           <div className="mainPage">
             <div className="mainCenter">
-              <div className="mainbox">
+              <div className="mainCenterList">
+                {commentLists.map(item => (
+                  <CommentList
+                    key={item.id}
+                    name={item.name}
+                    photo={item.photo}
+                    profile={item.profile}
+                    like={item.like}
+                  />
+                ))}
+              </div>
+              {/* <div className="mainbox">
                 <div className="mainFaceBox">
                   <div className="mainFace"></div>
                   <div className="mainFaceId">JungGwanHun</div>
@@ -134,19 +137,19 @@ function MainJung() {
                     </div>
                     <div className="bottomBoxDownHeart"></div>
                   </div>
+                  <form className="mainFooter" onSubmit={commnetClick}>
+                    <input
+                      type="text"
+                      className="mainFooterInput"
+                      placeholder="댓글 달기..."
+                      onChange={textComment}
+                    ></input>
+                    <div className="buttonClick" onClick={commnetClick}>
+                      게시
+                    </div>
+                  </form>
                 </div>
-                <form className="mainFooter" onSubmit={commnetClick}>
-                  <input
-                    type="text"
-                    className="mainFooterInput"
-                    placeholder="댓글 달기..."
-                    onChange={textComment}
-                  ></input>
-                  <div className="buttonClick" onClick={commnetClick}>
-                    게시
-                  </div>
-                </form>
-              </div>
+              </div> */}
               <div className="mainRight">
                 <div className="mainRightIconBox">
                   <div className="mainRightIcon"></div>
@@ -208,9 +211,11 @@ function MainJung() {
                   </div>
                 </div>
                 <div className="contact">
-                  instagram 정보 . 지원 . 홍보 센터 . API . <br />
-                  채용 정보 . 개인정보처리방침 . 약관 . <br />
-                  디렉터리 . 프로필 . 해시태그 . 언어
+                  <div className="contactBox">
+                    {AsideData.map(aside => {
+                      return <Aside key={aside.id} list={aside.list} />;
+                    })}
+                  </div>
                   <br />
                   <br />@ 2019 INSTAGRAM
                 </div>

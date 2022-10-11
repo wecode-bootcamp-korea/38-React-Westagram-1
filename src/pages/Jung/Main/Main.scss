@@ -183,33 +183,38 @@ main {
   left: 50%;
   transform: translate(-50%);
   width: 1100px;
-  height: 1000px;
+  height: auto;
 }
 .mainPage {
   display: flex;
   position: relative;
   width: 80%;
   left: 10%;
-  height: 90vh;
-  top: 0px;
+  height: 100%;
+  top: 100px;
 }
 
 .mainCenter {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  position: flex;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  height: 90vh;
+  align-items: flex-start;
+  height: auto;
   width: 100%;
 }
+.mainCenterList {
+  display: flex;
 
+  flex-direction: column;
+}
 .mainbox {
   background-color: rgb(250, 256, 250);
   display: inline-block;
-  width: 65%;
-  height: 700px;
+  width: 650px;
+  height: 770px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }
@@ -222,6 +227,39 @@ main {
 .mainFace {
   position: relative;
   background-image: url('../../../assets/Jung/cat.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+}
+.mainFaceA {
+  position: relative;
+  background-image: url('../../../assets/Jung/dog1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+}
+.mainFaceB {
+  position: relative;
+  background-image: url('../../../assets/Jung/dog6.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+}
+.mainFaceC {
+  position: relative;
+  background-image: url('../../../assets/Jung/dog3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -250,6 +288,27 @@ main {
   width: 100%;
   height: 380px;
   background-image: url('../../../assets/Jung/photo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.photoA {
+  width: 100%;
+  height: 380px;
+  background-image: url('../../../assets/Jung/dog1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.photoB {
+  width: 100%;
+  height: 380px;
+  background-image: url('../../../assets/Jung/dog6.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.photoC {
+  width: 100%;
+  height: 380px;
+  background-image: url('../../../assets/Jung/dog3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -335,6 +394,39 @@ main {
   width: 30px;
   height: 30px;
 }
+.bottomBoxMidIconA {
+  position: relative;
+  display: flex;
+  background-image: url('../../../assets/Jung/dog2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+}
+.bottomBoxMidIconB {
+  position: relative;
+  display: flex;
+  background-image: url('../../../assets/Jung/dog5.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+}
+.bottomBoxMidIconC {
+  position: relative;
+  display: flex;
+  background-image: url('../../../assets/Jung/dog4.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+}
 .bottomBoxMidId {
   font-size: 15px;
   position: relative;
@@ -348,11 +440,11 @@ main {
   left: 15px;
   position: relative;
   width: 95%;
-  height: 55px;
+  height: 90%;
 }
 .bottomBoxDownComment {
   font-size: 15px;
-  height: 100px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -374,7 +466,7 @@ main {
   margin-left: 10px;
   top: 3px;
   color: rgb(73, 70, 70);
-  width: 410px;
+  width: 500px;
 }
 .commentHeart {
   position: relative;
@@ -405,36 +497,33 @@ main {
   cursor: pointer;
 }
 .mainFooter {
-  top: 170px;
-  left: 20px;
+  display: flex;
   position: relative;
-  width: 95%;
-  height: 50px;
+  height: 40px;
+  left: 12px;
+  width: 100%;
   position: flex;
-  justify-content: space-between;
   align-items: center;
 
   .buttonClick {
-    top: 3px;
-    left: 510px;
     color: blue;
+    display: inline-block;
+    font-size: 15px;
+    left: -30px;
+    width: 28px;
     position: relative;
     cursor: pointer;
-    width: auto;
   }
 }
 .mainFooterInput {
   position: relative;
-  width: 105.7%;
-  top: 40px;
-  left: -21.2px;
+  width: 100%;
   height: 50px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }
 .mainRight {
   position: relative;
-  top: 170px;
   left: 10px;
   display: inline-block;
   flex-direction: column;
@@ -678,12 +767,22 @@ main {
   color: blue;
 }
 .contact {
-  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 13px;
   top: 30px;
   position: relative;
   width: 100%;
   height: 90px;
   color: lightgray;
+}
+.contactBox {
+  width: 200px;
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   nav {
@@ -721,7 +820,7 @@ main {
     position: absolute;
     left: 0%;
     transform: translate(0%);
-    position: flex;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     height: 90vh;
