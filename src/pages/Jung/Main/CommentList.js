@@ -1,11 +1,5 @@
 import Commenttext from './Commenttext';
-import React, {
-  // arr,
-  // delClick,
-  // commnetClick,
-  // textComment,
-  useState,
-} from 'react';
+import React, { useState } from 'react';
 const CommentList = props => {
   const [textlist, setTextlist] = useState([]);
   const [comment, setComment] = useState('');
@@ -90,6 +84,7 @@ const CommentList = props => {
               className="mainFooterInput"
               placeholder="댓글 달기..."
               onChange={textComment}
+              value={comment}
             ></input>
             <div className="buttonClick" onClick={commnetClick}>
               게시
