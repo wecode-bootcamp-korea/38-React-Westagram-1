@@ -1,16 +1,17 @@
+import { useState } from 'react';
 import InputComment from './InputComment';
 import CommentList from './CommentList';
-import { useState } from 'react';
 
-function Feed() {
+function Feed({ feed }) {
+  // const { id, userName, userImage, feedContent, feedImage, prevComment } = feed;
   const [comment, setComment] = useState('');
-  const [commentBox, setCommentBox] = useState([]);
-
+  const [commentBox, setCommentBox] = useState(feed.prevComment);
   const handleChangeComment = comment => setComment(comment);
 
   const handleSubmitComment = () => {
     const newComment = commentBox.concat({
       id: Date.now(),
+      userName: 'onnuri',
       comment: comment,
     });
     setCommentBox(newComment);
@@ -36,15 +37,18 @@ function Feed() {
       <article>
         <div className="user_wrap">
           <div className="user_profile">
-            <img src="images/Nuri/onnuri.jpeg" alt="김온누리님의 프로필사진" />
-            <p>onnuri</p>
+            <img
+              src={feed.userImage}
+              alt={`"${feed.userName}님의 프로필사진"`}
+            />
+            <p>{feed.userName}</p>
           </div>
           <a className="more_btn" href="#!">
             <img src="images/Nuri/more.png" alt="더보기" />
           </a>
         </div>
         <div className="picture_box">
-          <img src="images/Nuri/feed_sample.jpg" alt="사과" />
+          <img src={feed.feedImage} alt={feed.feedContent} />
         </div>
         <div className="comment_wrap">
           <div className="icon_box">
@@ -81,7 +85,8 @@ function Feed() {
               </p>
             </div>
             <p className="user_say">
-              <strong>onnuri</strong> 🍎
+              <strong>{feed.userName} </strong>
+              {feed.feedContent}
             </p>
             <CommentList comments={commentBox} onRemoveClick={handleRemove} />
           </div>

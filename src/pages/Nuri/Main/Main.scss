@@ -32,247 +32,260 @@
       }
     }
   }
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0 30px;
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid #eaeaea;
-    background-color: #fff;
-    z-index: 1;
+  // header {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   padding: 0 30px;
+  //   height: 60px;
+  //   width: 100%;
+  //   border-bottom: 1px solid #eaeaea;
+  //   background-color: #fff;
+  //   z-index: 1;
 
-    .inner_1000 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin: 0 auto;
-      max-width: 1000px;
+  //   .inner_1000 {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     position: relative;
+  //     margin: 0 auto;
+  //     max-width: 1000px;
+  //   }
+  //   h1 {
+  //     line-height: 60px;
+  //     font-size: 30px;
+  //     font-family: 'Dancing Script', cursive;
+  //   }
+  //   .search_box {
+  //     position: absolute;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     width: 268px;
+  //     height: 36px;
+  //     border: 1px solid #dbdbdb;
+  //     border-radius: 5px;
+  //     background-color: #fafafa;
+
+  //     input {
+  //       padding: 3px 25px;
+  //       height: 100%;
+  //       background-color: #fafafa;
+  //       border-radius: 5px;
+  //       &::placeholder {
+  //         text-align: center;
+  //       }
+  //     }
+
+  //     .search_img {
+  //       position: absolute;
+  //       /* left: 6px; */
+  //       left: 104px;
+  //       top: 50%;
+  //       transform: translateY(-50%);
+  //       font-size: 12px;
+  //       color: #aeaeae;
+  //       transition: all 0.3s;
+  //     }
+
+  //     .search_cancel {
+  //       display: none;
+  //       position: absolute;
+  //       top: 50%;
+  //       transform: translateY(-50%);
+  //       right: 6px;
+  //       color: #aeaeae;
+  //     }
+  //     .search_result {
+  //       .no_result {
+  //         width: 100%;
+  //         height: 362px;
+  //       }
+  //       p {
+  //         height: 100%;
+  //         text-align: center;
+  //         display: flex;
+  //         justify-content: center;
+  //         align-items: center;
+  //         font-weight: 700;
+  //         color: #8e8e8e;
+  //       }
+  //       /* 생성될 검색결과 */
+  //       .search_list_wrap {
+  //         li {
+  //           display: flex;
+  //           align-items: center;
+  //           margin-bottom: 8px;
+  //           &:last-child {
+  //             margin-bottom: 0;
+  //           }
+  //           img {
+  //             margin-right: 10px;
+  //             width: 44px;
+  //             height: 44px;
+  //             border-radius: 50%;
+  //           }
+  //         }
+  //         div p:first-child {
+  //           margin-bottom: 4px;
+  //           font-weight: 700;
+  //           font-size: 12px;
+  //         }
+
+  //         div p:last-child {
+  //           color: #8e8e8e;
+  //           font-size: 14px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .balloon {
+  //     display: none;
+  //     position: absolute;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     top: 150%;
+  //     padding: 20px;
+  //     width: 288px;
+  //     height: auto;
+  //     border: 1px solid #dbdbdb;
+  //     border-radius: 5px;
+  //     background-color: #fff;
+  //     z-index: 99;
+
+  //     &::before {
+  //       content: '';
+  //       display: block;
+  //       position: absolute;
+  //       top: -10px;
+  //       left: 50%;
+  //       transform: translateX(-50%);
+  //       border-bottom: 10px solid #fff;
+  //       border-right: 10px solid transparent;
+  //       border-left: 10px solid transparent;
+  //       z-index: 99;
+  //     }
+  //     &::after {
+  //       content: '';
+  //       display: block;
+  //       position: absolute;
+  //       top: -11px;
+  //       left: 50%;
+  //       transform: translateX(-50%);
+  //       border-bottom: 11px solid #dbdbdb;
+  //       border-right: 11px solid transparent;
+  //       border-left: 11px solid transparent;
+  //     }
+  //   }
+  //   /* header menu */
+  //   nav {
+  //     ul {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       width: 220px;
+  //       padding-right: 24px;
+  //     }
+  //     li a {
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       width: 24px;
+  //     }
+  //     li a i {
+  //       color: #262626;
+  //       font-size: 24px;
+  //     }
+  //     .modal_popup {
+  //       position: absolute;
+  //       border-radius: 50%;
+  //       overflow: hidden;
+  //       z-index: 99;
+  //     }
+  //     img {
+  //       width: 100%;
+  //     }
+  //     .balloon.user_menu {
+  //       top: 42px;
+  //       left: 170px;
+  //       padding: 0;
+  //       width: auto;
+  //       z-index: 99;
+  //       &::before {
+  //         left: 148px;
+  //       }
+  //       &::after {
+  //         left: 148px;
+  //       }
+  //       ul {
+  //         display: block;
+  //         padding-right: 0;
+  //       }
+  //       li {
+  //         &:hover {
+  //           background-color: #fafafa;
+  //         }
+  //         &:first-child {
+  //           border-radius: 4px 4px 0 0/ 4px 4px 0 0;
+  //         }
+  //         &:last-child {
+  //           border-top: 1px solid #dbdbdb;
+  //           border-radius: 0 0 4px 4px / 0 0 4px 4px;
+  //         }
+  //         a {
+  //           display: flex;
+  //           justify-content: flex-start;
+  //           padding: 8px 16px;
+  //           width: 230px;
+  //           height: 37px;
+  //           color: #262626;
+  //           font-size: 14px;
+  //         }
+  //         i {
+  //           width: 18px;
+  //           height: 18px;
+  //           display: flex;
+  //           justify-content: center;
+  //           align-items: center;
+  //           margin-right: 8px;
+  //           font-size: 16px;
+  //         }
+  //       }
+  //     }
+  //     .bg {
+  //       position: fixed;
+  //       left: 0;
+  //       bottom: 0;
+  //       top: 0;
+  //       right: 0;
+  //       z-index: 2;
+  //       background-color: transparent;
+  //       display: none;
+  //       justify-content: center;
+  //       align-items: center;
+  //     }
+  //   }
+  // } //header
+  .navBox {
+    background-color: #fafafa;
+    height: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid#aeaeae;
+    .logo a {
+      color: #111;
     }
-    h1 {
-      line-height: 60px;
-      font-size: 30px;
-      font-family: 'Dancing Script', cursive;
-    }
-    .search_box {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 268px;
-      height: 36px;
-      border: 1px solid #dbdbdb;
-      border-radius: 5px;
-      background-color: #fafafa;
-
-      input {
-        padding: 3px 25px;
-        height: 100%;
-        background-color: #fafafa;
-        border-radius: 5px;
-        &::placeholder {
-          text-align: center;
-        }
-      }
-
-      .search_img {
-        position: absolute;
-        /* left: 6px; */
-        left: 104px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 12px;
-        color: #aeaeae;
-        transition: all 0.3s;
-      }
-
-      .search_cancel {
-        display: none;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 6px;
-        color: #aeaeae;
-      }
-      .search_result {
-        .no_result {
-          width: 100%;
-          height: 362px;
-        }
-        p {
-          height: 100%;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-weight: 700;
-          color: #8e8e8e;
-        }
-        /* 생성될 검색결과 */
-        .search_list_wrap {
-          li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            img {
-              margin-right: 10px;
-              width: 44px;
-              height: 44px;
-              border-radius: 50%;
-            }
-          }
-          div p:first-child {
-            margin-bottom: 4px;
-            font-weight: 700;
-            font-size: 12px;
-          }
-
-          div p:last-child {
-            color: #8e8e8e;
-            font-size: 14px;
-          }
-        }
-      }
-    }
-    .balloon {
-      display: none;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 150%;
-      padding: 20px;
-      width: 288px;
+    .searchBox {
       height: auto;
-      border: 1px solid #dbdbdb;
-      border-radius: 5px;
-      background-color: #fff;
-      z-index: 99;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-bottom: 10px solid #fff;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        z-index: 99;
-      }
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -11px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-bottom: 11px solid #dbdbdb;
-        border-right: 11px solid transparent;
-        border-left: 11px solid transparent;
-      }
     }
-    /* header menu */
-    nav {
-      ul {
-        display: flex;
-        justify-content: space-between;
-        width: 220px;
-        padding-right: 24px;
-      }
-      li a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-      }
-      li a i {
-        color: #262626;
-        font-size: 24px;
-      }
-      .modal_popup {
-        position: absolute;
-        border-radius: 50%;
-        overflow: hidden;
-        z-index: 99;
-      }
-      img {
-        width: 100%;
-      }
-      .balloon.user_menu {
-        top: 42px;
-        left: 170px;
-        padding: 0;
-        width: auto;
-        z-index: 99;
-        &::before {
-          left: 148px;
-        }
-        &::after {
-          left: 148px;
-        }
-        ul {
-          display: block;
-          padding-right: 0;
-        }
-        li {
-          &:hover {
-            background-color: #fafafa;
-          }
-          &:first-child {
-            border-radius: 4px 4px 0 0/ 4px 4px 0 0;
-          }
-          &:last-child {
-            border-top: 1px solid #dbdbdb;
-            border-radius: 0 0 4px 4px / 0 0 4px 4px;
-          }
-          a {
-            display: flex;
-            justify-content: flex-start;
-            padding: 8px 16px;
-            width: 230px;
-            height: 37px;
-            color: #262626;
-            font-size: 14px;
-          }
-          i {
-            width: 18px;
-            height: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 8px;
-            font-size: 16px;
-          }
-        }
-      }
-      .bg {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        right: 0;
-        z-index: 2;
-        background-color: transparent;
-        display: none;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  } //header
+  }
+  // 공통 nav
 
   /* sec_feeds */
   main {
     display: flex;
     justify-content: center;
     padding: 80px 0 10px;
-
     .sec_feeds {
       margin-right: 32px;
+      margin-bottom: 30px;
       width: 470px;
       border: 1px solid #dbdbdb;
       border-radius: 2px;
@@ -313,12 +326,14 @@
 
       .picture_box {
         overflow: hidden;
-        height: 587px;
+        max-height: 587px;
         img {
           width: 100%;
         }
       }
-
+      .Comment {
+        margin-bottom: 2px;
+      }
       .comment_wrap {
         padding: 10px 20px;
         border-bottom: 1px solid #dbdbdb;
@@ -358,7 +373,11 @@
             }
           }
           .user_say {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 14px;
+          }
+          strong {
+            font-size: 16px;
           }
           /* 추가되는 댓글 */
           .comment_list_wrap {
