@@ -32,7 +32,6 @@ function LoginChoi() {
           <input
             onChange={e => {
               setPwValid(e.target.value);
-              console.log(pwValid);
             }}
             type="password"
             id="login-pw"

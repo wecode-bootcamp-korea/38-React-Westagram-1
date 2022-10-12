@@ -102,8 +102,13 @@
   display: flex;
 }
 
+.reply-list {
+  display: flex;
+}
+
 .reply-user {
   font-weight: 700;
+  margin-right: 10px;
 }
 .reply-input {
   display: flex;
@@ -149,5 +154,9 @@
 }
 
 .recommend-contents {
+  display: flex;
+}
+
+.footer {
   display: flex;
 }

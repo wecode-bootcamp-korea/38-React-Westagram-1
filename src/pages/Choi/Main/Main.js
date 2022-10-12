@@ -1,29 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
+import ReplyChoi from './Reply.js';
+import Nav from '../../../components/Nav/Nav.js';
+import { FOOTER_LIST } from './FOOTER_LIST';
 
 function MainChoi() {
+  const [commentsValue, setCommentsValue] = useState('');
+  const [commentsList, setCommentsList] = useState([]);
+
   return (
     <div className="wrapper">
-      <header className="nav">
-        <div className="nav-left-icons">
-          <div className="westagram-icon">
-            <i className="fa-brands fa-instagram" />
-            &nbsp;
-          </div>
-          <div className="westagram-logo">&nbsp;westagram</div>
-        </div>
-        <div className="finder">
-          <div className="glass">
-            <i className="fa-solid fa-magnifying-glass" />
-          </div>
-          <input className="search" />
-        </div>
-        <div className="nav-right-icons">
-          <i className="fa-regular fa-compass" />
-          <i className="fa-regular fa-heart" />
-          <i className="fa-regular fa-user" />
-        </div>
-      </header>
+      <Nav />
       <div className="main">
         <div className="feeds">
           <div className="user">
@@ -51,20 +38,37 @@ function MainChoi() {
             </div>
           </div>
           <div className="reply">
-            <div className="reply-comments" id="reply-comments">
-              <div className="reply-user" id="reply-user">
-                OLA&nbsp;
-              </div>
-              <div className="reply-content" id="reply-content">
-                호우쓋!
-              </div>
-            </div>
+            {commentsList.map((comment, index) => (
+              <ReplyChoi key={index} comment={comment} />
+            ))}
             <div className="reply-input">
-              <input className="reply-input-input" id="reply-input" />
-              <button className="reply-input-button" id="reply-button" disabled>
-                게시
-                <a />
-              </button>
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  let comments = [
+                    ...commentsList,
+                    {
+                      id: Date.now(),
+                      text: commentsValue,
+                      like: false,
+                    },
+                  ];
+                  setCommentsList(comments);
+                  setCommentsValue('');
+                }}
+              >
+                <input
+                  className="reply-input-input"
+                  id="reply-input"
+                  onChange={e => {
+                    setCommentsValue(e.target.value);
+                  }}
+                  value={commentsValue}
+                />
+                <button className="reply-input-button" id="reply-button">
+                  게시
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -105,11 +109,26 @@ function MainChoi() {
               <div className="recommend-user-follow">추천팔로우</div>
             </div>
           </div>
-          <div className="footer">instagram정보</div>
+          <ul className="footer">
+            {FOOTER_LIST.map(footerList => {
+              return <li key={footerList.id}>{footerList.footerName}</li>;
+            })}
+          </ul>
         </div>
       </div>
     </div>
   );
 }
+
+// Reply.map;(function(a, i)){
+//   return adf
+// }
+// const Reply = () => {
+//   return (
+//     <div>
+//       <div>asdasdasd</div>
+//     </div>
+//   );
+// };
 
 export default MainChoi;
