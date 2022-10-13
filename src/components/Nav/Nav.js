@@ -17,7 +17,7 @@ const Nav = () => {
         </div>
         <div className="searchBox">
           <input type="text" className="search" placeholder="검색" />
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass" />
         </div>
         <div className="right">
           <div alt="explore" className="rightExplore" />
@@ -27,19 +27,19 @@ const Nav = () => {
             <div className="navMeBox">
               <div className="navMeBoxPro">
                 <div className="Me">
-                  <i className="fa-regular fa-user"></i>
+                  <i className="fa-regular fa-user" />
                 </div>
                 <div clasclassNames="MeText">프로필</div>
               </div>
               <div className="navMeBoxSave">
                 <div className="Save">
-                  <i className="fa-regular fa-bookmark"></i>
+                  <i className="fa-regular fa-bookmark" />
                 </div>
                 <div className="SaveText">저장됨</div>
               </div>
               <div className="navMeBoxSet">
                 <div className="Setting">
-                  <i className="fa-solid fa-gear"></i>
+                  <i className="fa-solid fa-gear" />
                 </div>
                 <div className="SettingText">설정</div>
               </div>

@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.outerbox {
+  padding-top: 200px;
+}
+
+.inputBox {
+  width: 350px;
+}
+
+.boxWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  padding: 20px 40px 30px 40px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.loginInfo {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.loginInput {
+  background-color: #dbdbdb;
+  width: 250px;
+  height: 30px;
+  margin-top: 6px;
+  border-color: transparent;
+  border-radius: 2px;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c4e1fb;
+  width: 250px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.westagramTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Lobster", cursive;
+
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  margin-bottom: 0;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.passwordForgot {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  color: #2b537f;
+  font-size: 14px;
+  margin-top: 0;
+  padding-top: 20px;
+}
