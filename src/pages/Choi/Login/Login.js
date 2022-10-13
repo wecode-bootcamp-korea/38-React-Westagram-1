@@ -14,9 +14,32 @@ function LoginChoi() {
   const [pwValid, setPwValid] = useState('');
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate(`/main-choi`);
+    fetch('http://10.58.52.116:8000/users/signin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'qq',
+        email: idValid,
+        profile_image: 'qqq',
+        password: pwValid,
+      }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => console.log(data));
+    //   fetch('http://10.58.52.116:8000/users/signup', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({
+    //       name: 'qq',
+    //       email: idValid,
+    //       profile_image: 'qqq',
+    //       password: pwValid,
+    //     }),
+    //   }) //요청
+    //     .then(response => response.json())
+    //     .then(data => console.log(data));
+    // };
   };
-
   return (
     <div className="wrapper">
       <div className="westagram">
