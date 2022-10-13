@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function Main() {
   const [feedList, setFeedList] = useState([]);
   useEffect(() => {
-    fetch('../src/pages/Nuri/data.json', {
+    fetch('/data/nuri.json', {
       method: 'GET',
     })
       .then(res => res.json())
