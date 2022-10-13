@@ -1,0 +1,60 @@
+@import '../../../styles/variables.scss';
+
+.login {
+  @include flex(center, center, null);
+  height: 100vh;
+  button,
+  input {
+    width: 100%;
+  }
+  &_box {
+    padding: 10px 0;
+    width: 348px;
+    height: 374px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+  }
+  .login_box h1 {
+    margin: 36px auto 46px;
+    height: 51px;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .input_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+
+    input {
+      padding: 0 6px;
+      margin-bottom: 6px;
+      height: 36px;
+      background-color: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 2px;
+      &:focus {
+        border: 1px solid #a8a8a8;
+      }
+      &::placeholder {
+        color: #a0a0a0;
+        font-size: 12px;
+      }
+    }
+
+    .login_btn {
+      margin: 8px auto;
+      height: 30px;
+      background-color: rgb(0, 149, 246);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      &[disabled] {
+        background-color: #c0dffd;
+      }
+    }
+  }
+}

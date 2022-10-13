@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "userName": "onnuri",
+    "userImage": "images/Nuri/onnuri.jpeg",
+    "feedContent": "38기 김온누리입니다",
+    "feedImage": "images/Nuri/feed_sample1.jpeg",
+    "prevComment": [
+      {
+        "id": 1,
+        "userName": "wecode",
+        "comment": "소통해요"
+      },
+      {
+        "id": 2,
+        "userName": "bomsori",
+        "comment": "미운 5살"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "bomsori",
+    "userImage": "images/Nuri/bomsori.jpeg",
+    "feedContent": "독일 날씨 넘 추워어",
+    "feedImage": "images/Nuri/feed_sample2.jpg",
+    "prevComment": [
+      {
+        "id": 1,
+        "userName": "wewewe",
+        "comment": "좋아요~~"
+      },
+      {
+        "id": 2,
+        "userName": "purensol",
+        "comment": "한국언제오시나요오"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "dassohmme",
+    "userImage": "images/Nuri/profile3.jpeg",
+    "feedContent": "나랑 보러 갈사람~",
+    "feedImage": "images/Nuri/feed_sample3.jpeg",
+    "prevComment": [
+      {
+        "id": 1,
+        "userName": "hungry",
+        "comment": "주말에뭐드실래요"
+      }
+    ]
+  }
+]
