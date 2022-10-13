@@ -3,6 +3,7 @@ import './Login.scss';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
+import { useState } from 'react;';
 
 function LoginWill() {
   const navigate = useNavigate();
@@ -21,6 +22,23 @@ function LoginWill() {
   const saveUserPw = event => {
     setCheckpw(event.target.value);
     console.log(event.target.value);
+  };
+
+  const loginChecker = event => {
+    event.preventDefault();
+    console.log('working');
+    fetch('http://10.58.52.129:3000/users/signin ', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({
+        name: 'woojin',
+        email: checkid,
+        password: checkpw,
+        profileImage: 'mutjinsajin',
+      }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => console.log(data));
   };
 
   return (

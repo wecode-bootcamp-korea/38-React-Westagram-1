@@ -16,6 +16,7 @@ import {
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import { Nav } from './components/Nav/Nav';
+import Comment from './Comment';
 
 function MainWill() {
   let [likes, likesadd] = useState(0);
@@ -34,7 +35,7 @@ function MainWill() {
               <span className="instaID">
                 <strong>w00jinkim</strong>
               </span>
-              <span class="threeDots">
+              <span className="threeDots">
                 <strong>···</strong>
               </span>
             </div>
@@ -68,35 +69,7 @@ function MainWill() {
                 좋아합니다
               </span>
             </div>
-            <div className="instaDescription">
-              <ul id="ulComm" className="ulCom">
-                <li>
-                  <div>
-                    <strong>w00jinkim</strong> 가보자 우주로!
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <strong>BMW Korea</strong> 거봐 좋았잖아~~~~~
-                  </div>
-                </li>
-              </ul>
-              <div className="theTimeAgo">3시간 전</div>
-            </div>
-            <div className="replyText">
-              <form id="instaForm">
-                <input
-                  id="instaCom"
-                  className="instagramReply"
-                  type="text"
-                  placeholder="댓글 달기..."
-                />
-                <button id="replyBtn" className="replySubmit">
-                  게시
-                </button>
-              </form>
-              <ul id="comments" />
-            </div>
+            <Comment />
           </article>
         </div>
         <div className="mainRight">
