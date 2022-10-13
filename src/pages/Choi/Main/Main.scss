@@ -1,0 +1,162 @@
+* {
+  font-size: 15px;
+}
+
+.nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+.nav-left-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right-icons i {
+  margin: 0px 5px 0px 5px;
+  font-size: 25px;
+}
+
+.westagram-icon i {
+  font-size: 30px;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+.westagram-logo {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.finder {
+  display: flex;
+  justify-content: center;
+  border: 1px solid grey;
+  padding: 5px 15px 5px 15px;
+}
+
+.search {
+  border: none;
+}
+
+.nav-right-icons {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  background-color: #fafafa;
+}
+
+.feeds {
+  width: 500px;
+  margin-left: 10햣 vw;
+  margin-right: 5vw;
+  border: 1px solid black;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.pro-pic img {
+  width: 25px;
+  border-radius: 70%;
+}
+
+.user-more {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.pic img {
+  width: 500px;
+}
+
+.article-iconbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-iconbar i {
+  margin: 0px 5px 0px 5px;
+  font-size: 22px;
+}
+
+.reply-comments {
+  display: flex;
+}
+
+.reply-list {
+  display: flex;
+}
+
+.reply-user {
+  font-weight: 700;
+  margin-right: 10px;
+}
+.reply-input {
+  display: flex;
+}
+
+.main-right {
+  margin-right: 15vw;
+}
+
+.its-me {
+  display: flex;
+  align-items: center;
+}
+
+.its-me-left img,
+.story-user-profile img,
+.recommend-user-profile img {
+  width: 30px;
+  border-radius: 70%;
+}
+
+.its-me-desc {
+  color: gray;
+}
+
+.story {
+  border: 1px solid black;
+}
+
+.story-upper {
+  display: flex;
+}
+
+.story-user {
+  display: flex;
+}
+
+.recommend {
+  border: 1px solid gray;
+}
+.recommend-upper {
+  display: flex;
+}
+
+.recommend-contents {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+}
